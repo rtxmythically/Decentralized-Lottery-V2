@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/i18n.ts","./src/main.tsx","./src/types.ts","./src/components/prizecard.tsx","./src/components/scratchcard.tsx","./src/components/toast.tsx","./src/components/treasurechest.tsx","./src/config/wagmi.ts","./src/config/web3modal.ts","./src/types/window.d.ts"],"version":"5.9.3"}

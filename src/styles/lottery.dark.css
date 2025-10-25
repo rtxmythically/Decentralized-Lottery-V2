@@ -1,0 +1,220 @@
+/* Dark theme for Lottery UI */
+.lottery-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #020617, #061018);
+  color: #e6eef6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.lottery-card {
+  width: 100%;
+  max-width: 78rem; /* similar to original max-w-5xl */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.03);
+  margin: 1rem 0;
+}
+
+.lottery-header {
+  @apply flex flex-col sm:flex-row justify-between items-center mb-6;
+}
+
+.lottery-title {
+  @apply text-3xl sm:text-4xl font-extrabold text-white;
+}
+
+.language-switcher {
+  @apply flex gap-2 mt-4 sm:mt-0;
+}
+
+.language-button {
+  @apply px-3 py-1 rounded-full text-sm font-medium transition-all duration-300;
+}
+
+.language-button-active {
+  @apply bg-emerald-600 text-white;
+}
+
+.language-button-inactive {
+  @apply bg-neutral-700 text-gray-200 hover:bg-neutral-600;
+}
+
+.wallet-section {
+  @apply mb-8;
+}
+
+.wallet-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+.wallet-connect-prompt {
+  @apply bg-neutral-800/60 rounded-lg p-4 mb-4 text-center;
+}
+
+.connect-button {
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color .18s ease, transform .12s ease;
+  box-shadow: 0 8px 20px rgba(5,150,105,0.12);
+  border: none;
+}
+.connect-button:hover { background-color: #10b981; transform: translateY(-1px); }
+
+.prize-list-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #e6eef6;
+}
+
+.prize-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8;
+}
+
+/* Prize card specific styles to mimic light layout but dark */
+.prize-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+.prize-card h3 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+.prize-card p { color: rgba(255,255,255,0.8); margin: 0.25rem 0; }
+
+.game-button {
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 12px 30px rgba(5,150,105,0.12);
+}
+.game-button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.5rem;
+  z-index: 60;
+}
+.toast-message {
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Transaction overlay */
+.tx-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2,6,23,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 30;
+  border-radius: 0.75rem;
+}
+
+.loading-spinner {
+  @apply animate-spin mr-2 text-white;
+}
+
+.result-container {
+  @apply flex flex-col items-center gap-4;
+}
+
+.result-card {
+  @apply text-center rounded-xl p-6 shadow-md w-full;
+}
+
+.result-win {
+  @apply bg-emerald-700/80;
+}
+
+.result-lose {
+  @apply bg-rose-700/80;
+}
+
+.result-title {
+  @apply text-2xl font-bold text-white mb-2;
+}
+
+.scratch-card-container {
+  @apply relative w-full aspect-[2/1] mb-4;
+}
+
+.result-text {
+  @apply text-xl font-semibold text-gray-200;
+}
+
+.action-buttons {
+  @apply flex gap-4;
+}
+
+.play-again-button {
+  @apply bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md disabled:opacity-50;
+}
+
+.share-button {
+  @apply bg-sky-600 hover:bg-sky-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md;
+}
+
+.scratch-card {
+  @apply relative w-full h-full cursor-pointer;
+}
+
+.scratch-canvas {
+  @apply w-full h-full rounded-lg;
+}
+
+.scratch-reveal {
+  @apply absolute inset-0 flex items-center justify-center bg-neutral-900/80 rounded-lg;
+}
+
+.prize-amount {
+  @apply text-3xl font-bold mb-2 text-white;
+}
+
+.error-message {
+  @apply text-rose-300 text-center mt-4;
+}
+
+@media (max-width: 640px) {
+  .lottery-card {
+    @apply p-4;
+  }
+  .action-buttons {
+    @apply flex-col;
+  }
+  .share-button,
+  .play-again-button {
+    @apply w-full;
+  }
+}

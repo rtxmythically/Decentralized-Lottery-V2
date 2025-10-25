@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-blue-950 min-h-screen text-white;
+  }
+}
+
+@layer components {
+  .prize-card {
+    @apply bg-blue-900 rounded-xl p-4 text-center border border-black hover:border-blue-500 transition-all duration-300 shadow-md;
+  }
+}
